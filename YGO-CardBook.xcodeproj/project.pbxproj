@@ -13,6 +13,8 @@
 		9CFBB94926BE583900A3A5F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFBB94726BE583900A3A5F0 /* Main.storyboard */; };
 		9CFBB94B26BE584000A3A5F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFBB94A26BE584000A3A5F0 /* Assets.xcassets */; };
 		9CFBB94E26BE584000A3A5F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFBB94C26BE584000A3A5F0 /* LaunchScreen.storyboard */; };
+		9CFBB95626BE6A3000A3A5F0 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBB95526BE6A2F00A3A5F0 /* Card.swift */; };
+		9CFBB95B26BE8D2C00A3A5F0 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBB95A26BE8D2C00A3A5F0 /* CardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9CFBB94A26BE584000A3A5F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CFBB94D26BE584000A3A5F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CFBB94F26BE584000A3A5F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CFBB95526BE6A2F00A3A5F0 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9CFBB95A26BE8D2C00A3A5F0 /* CardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				9CFBB94A26BE584000A3A5F0 /* Assets.xcassets */,
 				9CFBB94C26BE584000A3A5F0 /* LaunchScreen.storyboard */,
 				9CFBB94F26BE584000A3A5F0 /* Info.plist */,
+				9CFBB95526BE6A2F00A3A5F0 /* Card.swift */,
+				9CFBB95A26BE8D2C00A3A5F0 /* CardManager.swift */,
 			);
 			path = "YGO-CardBook";
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				9CFBB94626BE583900A3A5F0 /* ViewController.swift in Sources */,
 				9CFBB94226BE583900A3A5F0 /* AppDelegate.swift in Sources */,
 				9CFBB94426BE583900A3A5F0 /* SceneDelegate.swift in Sources */,
+				9CFBB95B26BE8D2C00A3A5F0 /* CardManager.swift in Sources */,
+				9CFBB95626BE6A3000A3A5F0 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5K2D8EVZ5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "YGO-CardBook/Info.plist";
@@ -317,6 +326,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5K2D8EVZ5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "YGO-CardBook/Info.plist";

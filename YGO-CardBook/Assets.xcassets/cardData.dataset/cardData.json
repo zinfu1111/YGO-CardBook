@@ -1,0 +1,104 @@
+[
+  {
+    "name": "太陽神的翼神龍",
+    "level": 10,
+    "cardType": 3,
+    "monCardType": 0
+  },
+  {
+    "name": "青眼白龍",
+    "level": 8,
+    "cardType": 0,
+    "monCardType": 1
+  },
+  {
+    "name": "青眼究極龍",
+    "level": 12,
+    "cardType": 2,
+    "monCardType": 1
+  },
+  {
+    "name": "時間魔術師",
+    "level": 2,
+    "cardType": 1,
+    "monCardType":2
+  },
+  {
+    "name": "疾風之暗黑騎士蓋亞",
+    "level": 8,
+    "cardType": 1,
+    "monCardType": 2
+  },
+  {
+    "name": "真紅眼黑龍",
+    "level": 0,
+    "cardType": 0,
+    "monCardType": 0
+  },
+  {
+    "name": "破壞龍鋼多拉",
+    "level": 8,
+    "cardType": 1,
+    "monCardType": 2
+  },
+  {
+    "name": "閃電戰神基爾佛德",
+    "level": 8,
+    "cardType": 1,
+    "monCardType": 1
+  },
+  {
+    "name": "超魔導劍士-黑暗帕拉丁",
+    "level": 8,
+    "cardType": 2,
+    "monCardType": 2
+  },
+  {
+    "name": "黑魔導",
+    "level": 7,
+    "cardType": 0,
+    "monCardType": 2
+  },
+  {
+    "name": "黑魔導女孩",
+    "level": 6,
+    "cardType": 1,
+    "monCardType": 2
+  },
+  {
+    "name": "奧西里斯天空龍",
+    "level": 10,
+    "cardType": 3,
+    "monCardType": 0
+  },
+  {
+    "name": "電子終結龍",
+    "level": 10,
+    "cardType": 2,
+    "monCardType": 1
+  },
+  {
+    "name": "歐貝利斯克巨神兵",
+    "level": 10,
+    "cardType": 3,
+    "monCardType": 0
+  },
+  {
+    "name": "龍破壞劍士-巴斯達布雷達",
+    "level": 8,
+    "cardType": 2,
+    "monCardType": 1
+  },
+  {
+    "name": "E-HERO火焰翼俠",
+    "level": 6,
+    "cardType": 2,
+    "monCardType": 3
+  },
+  {
+    "name": "E-HERO新宇俠",
+    "level": 7,
+    "cardType": 0,
+    "monCardType": 1
+  }
+]
