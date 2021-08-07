@@ -30,21 +30,21 @@
                                             <color key="baseBackgroundColor" red="0.27826903466464709" green="0.19900377753640519" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjd-9S-q3G">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjd-9S-q3G">
                                         <rect key="frame" x="0.0" y="56.5" width="200" height="46"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                             <color key="baseBackgroundColor" red="0.27826903466464709" green="0.19900377753640519" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-eM-whF">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-eM-whF">
                                         <rect key="frame" x="0.0" y="112.5" width="200" height="46.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button">
                                             <color key="baseBackgroundColor" red="0.27826903466464709" green="0.19900377753640519" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFq-mb-Qy7">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFq-mb-Qy7">
                                         <rect key="frame" x="0.0" y="169" width="200" height="46"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button">
@@ -99,6 +99,12 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="hJN-Fb-2Hg" id="xsk-FK-HxC"/>
+                        <outlet property="cardImageView" destination="aFL-Zm-2sA" id="T7E-Sb-5sV"/>
+                        <outlet property="titleLabel" destination="uFt-nR-8Or" id="alj-go-hH5"/>
+                        <outletCollection property="answerButtons" destination="5dW-ib-iXL" collectionClass="NSMutableArray" id="Oyi-aZ-3c0"/>
+                        <outletCollection property="answerButtons" destination="Fjd-9S-q3G" collectionClass="NSMutableArray" id="VdR-Tt-7K4"/>
+                        <outletCollection property="answerButtons" destination="Pwp-eM-whF" collectionClass="NSMutableArray" id="CgU-k0-80E"/>
+                        <outletCollection property="answerButtons" destination="lFq-mb-Qy7" collectionClass="NSMutableArray" id="aoS-I2-Ecv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

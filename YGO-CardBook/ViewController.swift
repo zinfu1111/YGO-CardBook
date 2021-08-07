@@ -10,15 +10,20 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet var answerButtons:[UIButton]!
+    @IBOutlet weak var cardImageView:UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var desk:[Card] = []
     var currentCard = 0
+    var problemType:ProblemType = .cardType
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackground()
         setupDesk()
+        setupQA()
     }
     
     
@@ -29,7 +34,7 @@ class ViewController: UIViewController {
         
     }
 
-    func setupDesk()  {
+    func setupDesk() {
         desk.removeAll()
         
         while desk.count < 10 {
@@ -40,6 +45,42 @@ class ViewController: UIViewController {
                 desk.append(card)
             }
         }
+    }
+    
+    func setupQA() {
+        let card = desk[currentCard]
+        cardImageView.image = card.image
+        problemType = ProblemType.random()
+        let tmpAnwsers = CardManager.shared.getProblemAnwsers(card: desk[currentCard])
+        var anwsers = [Card]()
+        
+        while anwsers.count < 4 {
+            let index = Int.random(in: 0..<tmpAnwsers.count)
+            let card = tmpAnwsers[index]
+            if anwsers.first(where: {$0.name == card.name}) == nil {
+                anwsers.append(card)
+            }
+        }
+        setupQAButton(cards: anwsers)
+        
+    }
+    
+    func setupQAButton(cards:[Card]) {
+        print(cards)
+        for button in answerButtons {
+            
+            switch problemType {
+            case .cardType:
+                button.setTitle(cards[button.tag].type.title, for: .normal)
+            case .monCardType:
+                button.setTitle(cards[button.tag].monType.title, for: .normal)
+            case .level:
+                button.setTitle("等級\(cards[button.tag].level)", for: .normal)
+            case .name:
+                button.setTitle("\(cards[button.tag].name)", for: .normal)
+            }
+        }
+        
     }
 
 }

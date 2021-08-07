@@ -18,6 +18,21 @@ class CardManager {
         cards = load("cardData")
     }
 
+    func getProblemAnwsers(card:Card) -> [Card] {
+        
+        var tmpCards = [Card]()
+        while tmpCards.count < 3 {
+            let index = Int.random(in: 0..<self.cards.count)
+            let card = self.cards[index]
+            
+            if tmpCards.first(where: {$0.name == card.name}) == nil {
+                tmpCards.append(card)
+            }
+        }
+        tmpCards.append(card)
+        
+        return tmpCards
+    }
 
     func load<T: Decodable>(_ filename: String) -> T {
         guard let data = NSDataAsset(name: filename)?.data else {

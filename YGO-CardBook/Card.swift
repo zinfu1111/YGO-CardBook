@@ -8,9 +8,9 @@
 import UIKit
 import Foundation
 
-enum ProblemType {
+enum ProblemType:Int {
     
-    case cardType
+    case cardType = 0
     case monCardType
     case level
     case name
@@ -30,7 +30,23 @@ enum ProblemType {
         
         return "請問這張卡的\(title)"
     }
+    
+    private static let count: ProblemType.RawValue = {
+            // find the maximum enum value
+            var maxValue: Int = 0
+            while let _ = ProblemType(rawValue: maxValue) {
+                maxValue += 1
+            }
+            return maxValue
+        }()
+
+    static func random() -> ProblemType {
+        // pick and return a new value
+        let rand = arc4random_uniform(UInt32(count))
+        return ProblemType(rawValue: Int(rand))!
+    }
 }
+
 
 enum CardType:Int {
     case common = 0
@@ -50,6 +66,21 @@ enum CardType:Int {
             return "神之卡"
         }
         
+    }
+    
+    private static let count: CardType.RawValue = {
+            // find the maximum enum value
+            var maxValue: Int = 0
+            while let _ = CardType(rawValue: maxValue) {
+                maxValue += 1
+            }
+            return maxValue
+        }()
+
+    static func random() -> CardType {
+        // pick and return a new value
+        let rand = arc4random_uniform(UInt32(count))
+        return CardType(rawValue: Int(rand))!
     }
 }
 
@@ -71,6 +102,21 @@ enum MonCardType:Int {
             return "風屬性"
         }
         
+    }
+    
+    private static let count: MonCardType.RawValue = {
+            // find the maximum enum value
+            var maxValue: Int = 0
+            while let _ = MonCardType(rawValue: maxValue) {
+                maxValue += 1
+            }
+            return maxValue
+        }()
+
+    static func random() -> MonCardType {
+        // pick and return a new value
+        let rand = arc4random_uniform(UInt32(count))
+        return MonCardType(rawValue: Int(rand))!
     }
 }
 
