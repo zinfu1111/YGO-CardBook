@@ -92,17 +92,64 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTr-I1-rVf">
+                                <rect key="frame" x="97" y="209" width="220" height="57"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eeo-Vh-aIO">
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="57"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BhC-I6-rFR">
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OIF-Pa-WN2">
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4X-cx-GsP">
+                                <rect key="frame" x="96.333333333333329" y="439" width="221.33333333333337" height="88"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZJ4-HF-gme">
+                                    <rect key="frame" x="0.0" y="0.0" width="222" height="88"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEI-W4-APZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="2" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RMM-lg-VJB">
+                                                <rect key="frame" x="0.0" y="0.0" width="2" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HdZ-1z-WFl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1R1-6U-ZBg"/>
+                            <constraint firstItem="I4X-cx-GsP" firstAttribute="height" secondItem="aFL-Zm-2sA" secondAttribute="height" multiplier="0.27673" id="8dI-ia-AsV"/>
                             <constraint firstItem="aFL-Zm-2sA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="200:375" id="9KR-xH-CUG"/>
                             <constraint firstItem="aFL-Zm-2sA" firstAttribute="top" secondItem="OGN-1W-iGG" secondAttribute="bottom" constant="30" id="ERf-2B-yhj"/>
+                            <constraint firstItem="WTr-I1-rVf" firstAttribute="top" secondItem="aFL-Zm-2sA" secondAttribute="top" id="GKd-Uq-vV7"/>
                             <constraint firstAttribute="trailing" secondItem="hJN-Fb-2Hg" secondAttribute="trailing" id="GY6-ZH-reC"/>
+                            <constraint firstItem="I4X-cx-GsP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ISH-ZL-Z4v"/>
+                            <constraint firstItem="I4X-cx-GsP" firstAttribute="bottom" secondItem="aFL-Zm-2sA" secondAttribute="bottom" id="IaB-yE-Jrn"/>
                             <constraint firstItem="hJN-Fb-2Hg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jdi-ff-xJ3"/>
+                            <constraint firstItem="WTr-I1-rVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jvt-6q-yQh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HdZ-1z-WFl" secondAttribute="bottom" constant="20" id="NsM-5r-IAt"/>
+                            <constraint firstItem="I4X-cx-GsP" firstAttribute="width" secondItem="aFL-Zm-2sA" secondAttribute="width" multiplier="1.00151" id="PA9-Ze-rgc"/>
                             <constraint firstItem="aFL-Zm-2sA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uqx-1d-s2v"/>
+                            <constraint firstItem="WTr-I1-rVf" firstAttribute="height" secondItem="aFL-Zm-2sA" secondAttribute="height" multiplier="0.179245" id="Ury-fW-Rus"/>
                             <constraint firstItem="uFt-nR-8Or" firstAttribute="height" secondItem="OGN-1W-iGG" secondAttribute="height" multiplier="0.3" id="aPI-VF-E1L"/>
                             <constraint firstItem="hJN-Fb-2Hg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aeF-cI-cs0"/>
                             <constraint firstAttribute="bottom" secondItem="hJN-Fb-2Hg" secondAttribute="bottom" id="bh8-sc-jl0"/>
@@ -111,6 +158,7 @@
                             <constraint firstItem="OGN-1W-iGG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jNA-VC-sCg"/>
                             <constraint firstItem="aFL-Zm-2sA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jjm-NR-KLs"/>
                             <constraint firstItem="OGN-1W-iGG" firstAttribute="width" secondItem="aFL-Zm-2sA" secondAttribute="width" multiplier="1.2" id="ok0-VK-cVS"/>
+                            <constraint firstItem="WTr-I1-rVf" firstAttribute="width" secondItem="aFL-Zm-2sA" secondAttribute="width" multiplier="0.996979" id="qqO-6N-boi"/>
                             <constraint firstItem="OGN-1W-iGG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sS7-Ms-HcK"/>
                             <constraint firstItem="HdZ-1z-WFl" firstAttribute="top" secondItem="aFL-Zm-2sA" secondAttribute="bottom" constant="20" id="xKs-le-rsE"/>
                             <constraint firstItem="uFt-nR-8Or" firstAttribute="width" secondItem="OGN-1W-iGG" secondAttribute="width" multiplier="0.75" id="yh4-QM-f8T"/>
@@ -126,11 +174,13 @@
                         <outletCollection property="answerButtons" destination="Fjd-9S-q3G" collectionClass="NSMutableArray" id="VdR-Tt-7K4"/>
                         <outletCollection property="answerButtons" destination="Pwp-eM-whF" collectionClass="NSMutableArray" id="CgU-k0-80E"/>
                         <outletCollection property="answerButtons" destination="lFq-mb-Qy7" collectionClass="NSMutableArray" id="aoS-I2-Ecv"/>
+                        <outletCollection property="blurViews" destination="WTr-I1-rVf" collectionClass="NSMutableArray" id="gUi-ug-dic"/>
+                        <outletCollection property="blurViews" destination="I4X-cx-GsP" collectionClass="NSMutableArray" id="Ihc-LW-WOv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.399999999999999" y="97.601199400299862"/>
+            <point key="canvasLocation" x="33.333333333333336" y="97.010869565217405"/>
         </scene>
         <!--Question Level View Controller-->
         <scene sceneID="0bZ-Z7-A1g">

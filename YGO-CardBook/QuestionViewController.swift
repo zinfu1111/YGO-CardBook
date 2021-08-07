@@ -9,6 +9,8 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    
+    @IBOutlet var blurViews: [UIVisualEffectView]!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet var answerButtons:[UIButton]!
     @IBOutlet weak var cardImageView:UIImageView!
@@ -44,38 +46,62 @@ class QuestionViewController: UIViewController {
     
     @IBAction func nextQuestion(_ sender: UIButton) {
         
+        var result = false
+        
         switch problemType {
         case .cardType:
             if let answerText = sender.titleLabel?.text, desk[currentCard].type.title.elementsEqual(answerText) {
                 score += 10
+                result = true
             }
         case .monCardType:
             if let answerText = sender.titleLabel?.text, desk[currentCard].monType.title.elementsEqual(answerText) {
                 score += 10
+                result = true
             }
         case .level:
             if let answerText = sender.titleLabel?.text, "等級\(desk[currentCard].level)".elementsEqual(answerText) {
                 score += 10
+                result = true
             }
         case .name:
             if let answerText = sender.titleLabel?.text, "\(desk[currentCard].name)".elementsEqual(answerText) {
                 score += 10
+                result = true
             }
         }
         scoreLabel.text = "\(score)"
         
         if currentCard < desk.count - 1 {
-            currentCard += 1
-            setupQAHeader()
-            setupQAButton()
-        }else{
-            let alertVC = UIAlertController(title: "作答結束", message: "滿分100，您的分數為\(score)分", preferredStyle: .alert)
-            let checkAction = UIAlertAction(title: "確認", style: .default, handler: { _ in
-                self.dismiss(animated: true, completion: nil)
-            })
-            alertVC.addAction(checkAction)
-            self.present(alertVC, animated: true, completion: nil)
             
+            UIView.animate(withDuration: 1, animations: {[self] in
+                blurViews.forEach({$0.alpha = 0})
+                
+                
+                let alertVC = UIAlertController(title: result ? "答對":"答錯", message: "前往下一題", preferredStyle: .alert)
+                let checkAction = UIAlertAction(title: "確認", style: .default, handler: { [self] _ in
+                    
+                    currentCard += 1
+                    setupQAHeader()
+                    setupQAButton()
+                })
+                alertVC.addAction(checkAction)
+                self.present(alertVC, animated: true, completion: nil)
+            })
+            
+            
+        }else{
+            UIView.animate(withDuration: 1, animations: {[self] in
+                blurViews.forEach({$0.alpha = 0})
+                
+                let alertVC = UIAlertController(title: "作答結束", message: "滿分100，您的分數為\(score)分", preferredStyle: .alert)
+                let checkAction = UIAlertAction(title: "確認", style: .default, handler: { _ in
+                    self.dismiss(animated: true, completion: nil)
+                })
+                alertVC.addAction(checkAction)
+                self.present(alertVC, animated: true, completion: nil)
+                
+            })
         }
     }
     
@@ -102,10 +128,14 @@ class QuestionViewController: UIViewController {
     }
     
     func setupQAHeader() {
+        
+        blurViews.forEach({$0.alpha = 1})
         let card = desk[currentCard]
         cardImageView.image = card.image
         problemType = randomQuestion ? ProblemType.random() : problemType
         titleLabel.text = "目前題數：\(currentCard+1)\n\(problemType.problemTitle)"
+        
+        
     }
     
     
