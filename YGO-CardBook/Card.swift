@@ -19,7 +19,7 @@ enum ProblemType:Int {
         var title = ""
         switch self {
         case .cardType:
-            title = "什麼樣卡"
+            title = "類型"
         case .monCardType:
             title = "怪獸屬性"
         case .level:
@@ -28,7 +28,7 @@ enum ProblemType:Int {
             title = "卡片名稱"
         }
         
-        return "請問這張卡的\(title)"
+        return "請問這張卡的\(title)?"
     }
     
     private static let count: ProblemType.RawValue = {
