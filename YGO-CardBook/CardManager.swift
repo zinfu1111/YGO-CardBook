@@ -54,7 +54,7 @@ class CardManager {
         var tmpCardTypes = [Int]()
         tmpCardTypes.append(card.cardType)
         while tmpCardTypes.count < 4 {
-            let cardType = Int.random(in: 0...3)
+            let cardType = Int.random(in: 0..<CardType.count)
             
             if tmpCardTypes.first(where: {$0 == cardType}) == nil {
                 tmpCardTypes.append(cardType)
@@ -69,7 +69,7 @@ class CardManager {
         var tmpMonCardTypes = [Int]()
         tmpMonCardTypes.append(card.monCardType)
         while tmpMonCardTypes.count < 4 {
-            let monCardType = Int.random(in: 0...3)
+            let monCardType = Int.random(in: 0..<MonCardType.count)
             
             if tmpMonCardTypes.first(where: {$0 == monCardType}) == nil {
                 tmpMonCardTypes.append(monCardType)

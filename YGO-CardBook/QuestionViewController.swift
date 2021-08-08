@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: BaseViewController {
     
     
     @IBOutlet var blurViews: [UIVisualEffectView]!
@@ -35,9 +35,9 @@ class QuestionViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        self.bgImageView = backgroundImageView
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupBackground()
         setupDesk()
         setupQAHeader()
         setupQAButton()
@@ -71,22 +71,23 @@ class QuestionViewController: UIViewController {
             }
         }
         scoreLabel.text = "\(score)"
+        showResultMessage(result: result)
+    }
+    
+    func showResultMessage(result: Bool){
         
         if currentCard < desk.count - 1 {
             
             UIView.animate(withDuration: 1, animations: {[self] in
                 blurViews.forEach({$0.alpha = 0})
                 
-                
-                let alertVC = UIAlertController(title: result ? "答對":"答錯", message: "前往下一題", preferredStyle: .alert)
                 let checkAction = UIAlertAction(title: "確認", style: .default, handler: { [self] _ in
                     
                     currentCard += 1
                     setupQAHeader()
                     setupQAButton()
                 })
-                alertVC.addAction(checkAction)
-                self.present(alertVC, animated: true, completion: nil)
+                self.showMesssage(title: result ? "答對":"答錯", Msg: "前往下一題", actions: [checkAction])
             })
             
             
@@ -94,24 +95,12 @@ class QuestionViewController: UIViewController {
             UIView.animate(withDuration: 1, animations: {[self] in
                 blurViews.forEach({$0.alpha = 0})
                 
-                let alertVC = UIAlertController(title: "作答結束", message: "滿分100，您的分數為\(score)分", preferredStyle: .alert)
                 let checkAction = UIAlertAction(title: "確認", style: .default, handler: { _ in
                     self.dismiss(animated: true, completion: nil)
                 })
-                alertVC.addAction(checkAction)
-                self.present(alertVC, animated: true, completion: nil)
-                
+                self.showMesssage(title: "作答結束", Msg: "滿分100，您的分數為\(score)分", actions: [checkAction])
             })
         }
-    }
-    
-    
-    
-    func setupBackground() {
-        
-        let animatedImage = UIImage.animatedImageNamed("382b2a38a9d750ae35911b4b1fcfbf8c020cfc3dc1ea0-jH0AI8_fw658-", duration: 2)
-        backgroundImageView.image = animatedImage
-        
     }
 
     func setupDesk() {

@@ -31,7 +31,7 @@ enum ProblemType:Int {
         return "請問這張卡的\(title)?"
     }
     
-    private static let count: ProblemType.RawValue = {
+    static let count: ProblemType.RawValue = {
             // find the maximum enum value
             var maxValue: Int = 0
             while let _ = ProblemType(rawValue: maxValue) {
@@ -68,7 +68,7 @@ enum CardType:Int {
         
     }
     
-    private static let count: CardType.RawValue = {
+    static let count: CardType.RawValue = {
             // find the maximum enum value
             var maxValue: Int = 0
             while let _ = CardType(rawValue: maxValue) {
@@ -104,7 +104,7 @@ enum MonCardType:Int {
         
     }
     
-    private static let count: MonCardType.RawValue = {
+    static let count: MonCardType.RawValue = {
             // find the maximum enum value
             var maxValue: Int = 0
             while let _ = MonCardType(rawValue: maxValue) {
