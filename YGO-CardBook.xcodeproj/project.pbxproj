@@ -66,20 +66,60 @@
 		9CFBB94026BE583900A3A5F0 /* YGO-CardBook */ = {
 			isa = PBXGroup;
 			children = (
+				9CFBB96626BFF59000A3A5F0 /* ViewController */,
+				9CFBB96526BFF57B00A3A5F0 /* Extension */,
+				9CFBB96426BFF55600A3A5F0 /* Resource */,
+				9CFBB96326BFF53900A3A5F0 /* Helper */,
+				9CFBB96226BFF52B00A3A5F0 /* Model */,
+			);
+			path = "YGO-CardBook";
+			sourceTree = "<group>";
+		};
+		9CFBB96226BFF52B00A3A5F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CFBB95526BE6A2F00A3A5F0 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CFBB96326BFF53900A3A5F0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9CFBB95A26BE8D2C00A3A5F0 /* CardManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9CFBB96426BFF55600A3A5F0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				9CFBB94126BE583900A3A5F0 /* AppDelegate.swift */,
 				9CFBB94326BE583900A3A5F0 /* SceneDelegate.swift */,
-				9CFBB94526BE583900A3A5F0 /* QuestionViewController.swift */,
 				9CFBB94726BE583900A3A5F0 /* Main.storyboard */,
 				9CFBB94A26BE584000A3A5F0 /* Assets.xcassets */,
 				9CFBB94C26BE584000A3A5F0 /* LaunchScreen.storyboard */,
 				9CFBB94F26BE584000A3A5F0 /* Info.plist */,
-				9CFBB95526BE6A2F00A3A5F0 /* Card.swift */,
-				9CFBB95A26BE8D2C00A3A5F0 /* CardManager.swift */,
-				9CFBB95C26BEF72700A3A5F0 /* QuestionLevelViewController.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9CFBB96526BFF57B00A3A5F0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				9CFBB95E26BFD7B300A3A5F0 /* Ext+UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9CFBB96626BFF59000A3A5F0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CFBB94526BE583900A3A5F0 /* QuestionViewController.swift */,
+				9CFBB95C26BEF72700A3A5F0 /* QuestionLevelViewController.swift */,
 				9CFBB96026BFDEB600A3A5F0 /* BaseViewController.swift */,
 			);
-			path = "YGO-CardBook";
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
